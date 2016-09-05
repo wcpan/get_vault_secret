@@ -35,6 +35,11 @@ associate policy with IAM role  (Note that you should capture instnace profile A
 > vault write auth/aws-ec2/role/nevec-admin-ec2-role bound_iam_role_arn=arn:aws:iam::your_account_number:instance-profile/vault_test-ec2-role policies=dev_policy
 ```
 ## Usage
+Install get_vault_secret on client box
+```
+> go get github.com/wcpan/get_vault_secret
+```
+
 Put secret key/valut to vault
 ```
 > vault secret/foo_key value="top_secret"
