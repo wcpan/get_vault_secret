@@ -55,3 +55,8 @@ Release, make sure github API token is set in environment varialbe
 export GITHUB_TOKEN="YOUR_TOKEN"
 > make build release
 ```
+
+## Reference
+1. <a href="https://www.vaultproject.io/docs/auth/aws-ec2.html">Vault EC2 Auth backend</a>
+2. <a href="https://godoc.org/github.com/hashicorp/vault/api">Vault Go API</a>
+3. <a href="https://godoc.org/github.com/aws/aws-sdk-go/aws/ec2metadata">AWS metadata Go API</a>
