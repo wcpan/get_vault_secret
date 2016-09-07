@@ -41,7 +41,7 @@ path "auth/token/lookup-self" {
 
 - Put secret key/valut to vault
 ```
-> vault secret/foo_key value="top_secret"
+> vault secret/foo_key secret="top_secret"
 ```
 
 - On EC2 instance with an IAM role has permission to access vault secret
