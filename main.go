@@ -71,6 +71,9 @@ func getEc2Info() (string, string) {
 
 	// arn:aws:iam::$acct_number:instance-profile/$role_name
 	log.Debug(iamInfo.InstanceProfileArn)
+	if (iamInfo.InstanceProfileArn == "") {
+		log.Fatalln("Instance profile must be set")
+	}
 	instanceProfile := strings.SplitN(iamInfo.InstanceProfileArn, "/", 2)[1]
 	log.Debug(instanceProfile)
 	return pkcs7, instanceProfile
