@@ -45,6 +45,10 @@ func vaultLogin(vaultClient *api.Client, pkcs7 string, instanceProfile string) {
 	})
 	resp, err := vaultClient.RawRequest(req)
 
+	if err != nil {
+		log.Fatalf("Login vault failed, error: %s\n", err)
+	}
+
 	var response logical.Response
 	err = jsonutil.DecodeJSONFromReader(resp.Body, &response)
 	if resp != nil {
